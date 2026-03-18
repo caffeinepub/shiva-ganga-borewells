@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Navy primary: #17384D -> oklch(0.31 0.065 225) */
+    --primary: 0.31 0.065 225;
+    --primary-foreground: 0.98 0 0;
+
+    /* Orange accent: #B86A2B -> oklch(0.57 0.13 50) */
+    --accent: 0.57 0.13 50;
+    --accent-foreground: 0.98 0 0;
+
+    /* Beige background: #EFE5D7 -> oklch(0.92 0.025 75) */
+    --background: 0.92 0.025 75;
+    --foreground: 0.22 0.04 225;
+
+    --card: 0.96 0.015 75;
+    --card-foreground: 0.22 0.04 225;
+    --popover: 0.98 0 0;
+    --popover-foreground: 0.22 0.04 225;
+    --secondary: 0.88 0.03 75;
+    --secondary-foreground: 0.22 0.04 225;
+    --muted: 0.88 0.025 75;
+    --muted-foreground: 0.5 0.03 225;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.82 0.03 75;
+    --input: 0.85 0.025 75;
+    --ring: 0.57 0.13 50;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.98 0 0;
+    --sidebar-foreground: 0.22 0.04 225;
+    --sidebar-primary: 0.31 0.065 225;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.88 0.03 75;
+    --sidebar-accent-foreground: 0.22 0.04 225;
+    --sidebar-border: 0.82 0.03 75;
+    --sidebar-ring: 0.57 0.13 50;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+}
+
+/* Gallery infinite scroll animation */
+@keyframes gallery-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.gallery-scroll {
+  animation: gallery-scroll linear infinite;
+}
